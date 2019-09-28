@@ -1,13 +1,13 @@
-import pyplanner
+from pyplanner import pyplanner
 
 with open('cronograma.planner', 'r') as reader:
-    p = pyplanner.PyPlanner(reader.read())
-    i=1
-    for d in p.get_tasks():
-        print(str(i)+str(d['name'])+' > - <'+str(d['parent_id'])+'> - <'+str(d['resource_id']))
-        i+=1
+    project = pyplanner.PyPlanner(reader.read())
 
-    # for r in p.get_resources():
-    #     print(r)
+    # Print dictionary list of tasks
+    for task in project.get_tasks():
+        print(task)
 
-    # print(p.get_task_resource('4'))
+    for res in project.get_resources():
+        print(res)
+
+
