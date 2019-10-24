@@ -17,7 +17,7 @@ $ python3 setup.py install
 
 ## Using
 
-```
+```python
 from pyplanner import pyplanner
 
 with open('cronograma.planner', 'r') as reader:
@@ -26,3 +26,7 @@ with open('cronograma.planner', 'r') as reader:
     for task in project.get_tasks():
         print(task)
 ```
+
+## Features
+* open [Gnome Planner](https://wiki.gnome.org/Apps/Planner/) files and get tasks list
+*  
